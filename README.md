@@ -1,42 +1,74 @@
 # Documentation Repository
 
-* Review the [repository structure](#repository-structure)
-* [Use this repository template](#use-this-repository-template) as a starting point for your project.
+The cp-docs-repo-template is a Git repository template for multiple titles in a single repo that Silas and the Customer Platform team collaborate on in order to provide a flexible Git repository structure that works with the Docs2Drupal publication system, is topic-oriented, enables simple upstream-downstream collaboration, and in the future can allow for cross-repo content-sharing. The cp-docs-repo-template has the following properties:
+
+* multiple titles in a single repository
+* the repo structure makes it clear whether a topic is local to the specific distro of a title, shared between distros of a title, or shared between more than one titles
+* because of the repo structure with different levels of topic-sharing, the need for file naming conventions is reduced
+* it will work with a Github-first development model
+* it should work with all other documentation development models
+* it can easily be mirrored between Github and Gitlab using a script
+* in the future, Silas and the Customer Platform team will be testing cross-repo content-sharing using this repo templates
+
+
+You can review the [repository structure](#repository-structure), and [use this repository template](#use-this-repository-template) as a starting point for your project.
 
 ## Repository Structure Overview
 
 This repository contains all of the documentation for XYZ product name. It uses the following directory structure:
 
-.  
-├── README.md (This file)  
-├── docs (This folder contains all the asciidoc topics and top level content spec)  
-│   ├── My_Title_A  
-│   │   ├── master.adoc  
-│   │   ├── master-docinfo.xml  
-│   │   ├── buildGuide.sh (script to build this guide)  
-│   │   ├── topics -> ../topics/ (symlink to docs/topics/)  
-│   ├── My_Title_B  
-│   │   ├── master.adoc  
-│   │   ├── master-docinfo.xml  
-│   │   ├── buildGuide.sh (script to build this guide)  
-│   │   ├── topics -> ../topics/ (symlink to docs/topics/)  
-│   ├── My_Title_C  
-│   │   ├── master.adoc  
-│   │   ├── master-docinfo.xml  
-│   │   ├── buildGuide.sh (script to build this guide)  
-│   │   ├── topics -> ../topics/ (symlink to docs/topics/)  
-│   ├── topics  
-│   │   │   ├── images (This folder contains all the images)  
-│   │   │   │   ├── *.png  
-│   │   │   ├── *.adoc (AsciiDoc topic files)  
-├── internal-resources (Place any content useful for the writing team here, for example, style guides, how-tos)  
-└── scripts (Contains scripts to automate the processes used to create and build documentation)  
-    └── buildGuides.sh (Builds the top-level Guides that live in the docs/ folder)  
-
+.
+├── docs
+│   ├── My_Title_A
+│   │   ├── enterprise
+│   │   │   ├── master.adoc
+│   │   │   ├── master-docinfo.xml
+│   │   │   └── topics -> ../topics
+│   │   ├── topics
+│   │   │   ├── shared -> ../../shared
+│   │   │   ├── topic-1.adoc
+│   │   │   ├── topic-2.adoc
+│   │   │   ├── topic-4.adoc
+│   │   │   ├── topic-5.adoc
+│   │   │   ├── topic-6.adoc
+│   │   │   └── topic-7.adoc
+│   │   └── upstream_1
+│   │       ├── master.adoc
+│   │       ├── master-docinfo.xml
+│   │       ├── master.html
+│   │       └── topics -> ../topics
+│   ├── My_Title_B
+│   │   ├── enterprise
+│   │   │   ├── master.adoc
+│   │   │   ├── master-docinfo.xml
+│   │   │   └── topics -> ../topics
+│   │   ├── topics
+│   │   │   ├── shared -> ../../shared
+│   │   │   ├── topic-1.adoc
+│   │   │   ├── topic-2.adoc
+│   │   │   ├── topic-4.adoc
+│   │   │   ├── topic-5.adoc
+│   │   │   ├── topic-6.adoc
+│   │   │   └── topic-7.adoc
+│   │   └── upstream_1
+│   │       ├── master.adoc
+│   │       ├── master-docinfo.xml
+│   │       ├── master.html
+│   │       └── topics -> ../topics
+│   └── shared
+│       ├── images — This folder contains all imagess
+│       ├── templates
+│       │   ├── document-attributes.adoc
+│       │   └── revision-info.adoc
+│       ├── topic-shared-1.adoc
+│       └── topic-shared-2.adoc
+├── README.md
+└── scripts — Contains scripts to automate the processes used to create and build documentation
+    └── buildGuides.sh — Builds the top-level Guides that live in the docs/ folders
 
 ## Use this Repository Template
 
-Clone this repository to your local machine. You may want to build the books in this example repository and review the output to understand how it works before you make any changes. 
+Clone this repository to your local machine. You may want to build the books in this example repository and review the output to understand how it works before you make any changes.
 
 ### Build the Example Books
 
