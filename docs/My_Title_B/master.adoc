@@ -1,0 +1,34 @@
+include::topics/templates/document-attributes.adoc[]
+
+:my-title-b:
+:product-build:
+
+= {MyTitleBBookName}
+
+[[book_b_chapter_1]]
+== Chapter 1
+
+// Include topic-4
+include::topics/topic-4.adoc[leveloffset=+2]
+
+[[book_b_chapter_2]]
+== Chapter 2 {ProductShortName}
+
+// Include topic-5
+include::topics/topic-5.adoc[leveloffset=+2]
+
+[[book_b_chapter_3]]
+== Chapter 3 {ProductShortName}
+
+// Include shared topic-shared.adoc
+include::topics/topic-shared.adoc[leveloffset=+2]
+
+[appendix]
+= Reference Material
+
+// Add a topic here later
+
+// **********************************
+// * Appendix: Revision Information *
+// **********************************
+include::topics/templates/revision-info.adoc[]
