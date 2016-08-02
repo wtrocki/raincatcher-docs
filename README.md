@@ -17,7 +17,7 @@ You can review the [repository structure](#repository-structure), and [use this 
 
 This repository contains all of the documentation for XYZ product name. It uses the following directory structure:
 
-.
+~~~
 ├── docs
 │   ├── My_Title_A
 │   │   ├── enterprise
@@ -65,6 +65,7 @@ This repository contains all of the documentation for XYZ product name. It uses 
 ├── README.md
 └── scripts — Contains scripts to automate the processes used to create and build documentation
     └── buildGuides.sh — Builds the top-level Guides that live in the docs/ folders
+~~~
 
 ## Use this Repository Template
 
