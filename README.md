@@ -1,6 +1,8 @@
 # Documentation Repository
 
-The cp-docs-repo-template is a Git repository template for multiple titles in a single repo that Silas and the Customer Platform team collaborate on in order to provide a flexible Git repository structure that works with the Docs2Drupal publication system, is topic-oriented, enables simple upstream-downstream collaboration, and in the future can allow for cross-repo content-sharing. The cp-docs-repo-template has the following properties:
+WARNING: as of 18 August 2016, this template repo is still under heavy development! Email <dhensley@redhat.com> if you're interested in using it!
+
+The multi-topic-level-repo-template is a Git repository template for multiple titles in a single repo that Silas and the Customer Platform team collaborate on in order to provide a flexible Git repository structure that works with the Docs2Drupal publication system, is topic-oriented, enables simple upstream-downstream collaboration, and in the future can allow for cross-repo content-sharing. The multi-topic-level-repo-template has the following properties:
 
 * multiple titles in a single repository
 * the repo structure makes it clear whether a topic is local to the specific distro of a title, shared between distros of a title, or shared between more than one titles
