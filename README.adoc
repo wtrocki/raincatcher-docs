@@ -138,7 +138,7 @@ Copy the structure into your own local repository and make the following changes
 ### {RepoTemplateCodeName} Revision History
 
 1.0::
-  * rename `My_Title_A`, `My_Title_B` and `Upstream_1` directories to `my-title-a` and `upstream-1` naming patterns to make navigating the Git repo as fast as possible (thanks for the feedback, jross!).
+  * rename `My_Title_A`, `My_Title_B` and `Upstream_1` directories to `my-title-a`, `my-title-b` and `upstream-1` naming patterns to make navigating the Git repo as fast as possible. Thank you, jross, for making the suggestion!
   * `docs/shared/templates/document-attributes.adoc` moved to `docs/shared/attributes.adoc`.
   * all includes of `document-attributes.adoc` changed to correct for new attributes.adoc location.
   * `scripts/buildGuides.sh` moved to `resources/scripts/buildGuides.sh`.
