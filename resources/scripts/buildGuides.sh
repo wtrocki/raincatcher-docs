@@ -42,9 +42,9 @@ EXAMPLES:
    $0
 
   Build a specific guide(s) from $DOCS_SRC:
-    $0 My_Title_A
-    $0 My_Title_A
-    $0 My_Title_C
+    $0 my-title-a
+    $0 my-title-b
+    $0 my-title-c
 EOM
 }
 

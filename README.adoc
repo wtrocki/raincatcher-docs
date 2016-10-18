@@ -29,11 +29,10 @@ In addition, this repository structure has been designed to work with the follow
 
 ## Repository Structure Overview
 
-~~~
-
+----
 ├── README.md
 ├── docs
-│   ├── My_Title_A
+│   ├── my-title-a
 │   │   ├── enterprise
 │   │   │   ├── master-docinfo.xml
 │   │   │   ├── master.adoc
@@ -46,12 +45,12 @@ In addition, this repository structure has been designed to work with the follow
 │   │   │   ├── topic-5.adoc
 │   │   │   ├── topic-6.adoc
 │   │   │   └── topic-7.adoc
-│   │   └── upstream_1
+│   │   └── upstream-1
 │   │       ├── master-docinfo.xml
 │   │       ├── master.adoc
 │   │       ├── master.html
 │   │       └── topics -> ../topics
-│   ├── My_Title_B
+│   ├── my-title-b
 │   │   ├── enterprise
 │   │   │   ├── master-docinfo.xml
 │   │   │   ├── master.adoc
@@ -64,7 +63,7 @@ In addition, this repository structure has been designed to work with the follow
 │   │   │   ├── topic-5.adoc
 │   │   │   ├── topic-6.adoc
 │   │   │   └── topic-7.adoc
-│   │   └── upstream_1
+│   │   └── upstream-1
 │   │       ├── master-docinfo.xml
 │   │       ├── master.adoc
 │   │       ├── master.html
@@ -81,8 +80,7 @@ In addition, this repository structure has been designed to work with the follow
     └── scripts
         └── buildGuides.sh
         
-~~~
-
+----
 ## How to Use This Repository Template
 
 1. Clone this repository:
@@ -97,8 +95,8 @@ In addition, this repository structure has been designed to work with the follow
 3. Modify the global attributes in `docs/shared/attributes.adoc` for your project.
 
 4. Make modifications to the first title:
-    1. Copy the entire `docs/My_Title_A` directory and its contents to `docs/_<your_actual_first_title_name>_`. 
-    2. Rename the `enterprise` and `upstream_1` directories to match the names of your distros.
+    1. Copy the entire `docs/my-title-a` directory and its contents to `docs/_<your_actual_first_title_name>_`. 
+    2. Rename the `enterprise` and `upstream-1` directories to match the names of your distros.
     3. Define the *my-title-a* and *product-build* attributes in `master.adoc`.
     Ensure the first title builds after the modifications and then repeat these steps for each additional title.
     
@@ -129,8 +127,8 @@ Copy the structure into your own local repository and make the following changes
   * Replace the book names.
 3. Use 'git mv' to rename the book folder names.
 
-        $ cd My_Title_A
-        $ git mv My_Title_A Installation_Guide.
+        $ cd my-title-a
+        $ git mv my-title-a Installation_Guide.
 4. In a terminal, navigate to each book folder and add the symlink to the `topics/` using this command:
 
         $ ln -s ../topics topics
@@ -139,12 +137,14 @@ Copy the structure into your own local repository and make the following changes
 7. When you are ready, run the scripts to build the guides and review the output to make sure it looks correct.
 ////
 
-### {$RepoTemplateCodeName} Revision History
+### {RepoTemplateCodeName} Revision History
 
 1.0::
-  * `docs/shared/templates/document-attributes.adoc` moved to `docs/shared/attributes.adoc`
-  * all includes of `document-attributes.adoc` fixed
-  * RepoTemplateVersion and RepoTemplateCodeName attributes defined in `docs/shared/attributes.adoc`
+  * `docs/shared/templates/document-attributes.adoc` moved to `docs/shared/attributes.adoc`.
+  * all includes of `document-attributes.adoc` changed to correct for new attributes.adoc location.
+  * `scripts/buildGuides.sh` moved to `resources/scripts/buildGuides.sh`.
+  * latest version of the EAP team's `asciidoc-writing-guide.adoc` added to the `resources` directory for referential convenience.
+  * RepoTemplateVersion and RepoTemplateCodeName attributes defined in `docs/shared/attributes.adoc`.
 Pre-1.0::
 	* contains typo in repository structure diagram: "images — This folder contains all imagess"
 	* `buildGuides.sh` (98 lines, 86 sloc) does not work correctly because it had not been updated from the script developed by EAP
