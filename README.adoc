@@ -48,7 +48,6 @@ In addition, this repository structure has been designed to work with the follow
 │   │   └── upstream-1
 │   │       ├── master-docinfo.xml
 │   │       ├── master.adoc
-│   │       ├── master.html
 │   │       └── topics -> ../topics
 │   ├── my-title-b
 │   │   ├── enterprise
@@ -66,7 +65,6 @@ In addition, this repository structure has been designed to work with the follow
 │   │   └── upstream-1
 │   │       ├── master-docinfo.xml
 │   │       ├── master.adoc
-│   │       ├── master.html
 │   │       └── topics -> ../topics
 │   └── shared
 │       ├── attributes.adoc
