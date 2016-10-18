@@ -30,6 +30,7 @@ In addition, this repository structure has been designed to work with the follow
 ## Repository Structure Overview
 
 ~~~
+
 ├── README.md
 ├── docs
 │   ├── My_Title_A
@@ -79,9 +80,10 @@ In addition, this repository structure has been designed to work with the follow
     ├── asciidoc-writing-guide.adoc
     └── scripts
         └── buildGuides.sh
+        
 ~~~
 
-## Use this Repository Template
+## How to Use This Repository Template
 
 1. Clone this repository:
 
@@ -102,7 +104,9 @@ In addition, this repository structure has been designed to work with the follow
     
 5. If you are migrating existing content to this repository template, it is highly recommended to put all content into the `topics` directories for the appropriate titles, even if the content *is not* shared between distros. (There are more reasons for putting content that isn't shared between distros of a title or multiple titles into the `_<title>_/topics` directory, at least at first, but they are beyond the scope of this README. For a discussion of the reasoning, which touches on content development workflow, contact mailto:dhensley@redhat.com[Silas].)
 
-//// Fix buildGuides.sh to work with multi-topic-level and re-include this info
+//// 
+Fix buildGuides.sh to work with multi-topic-level and re-include this info
+
 ### Build the Example Books
 
 To build all of the example books, open a terminal, navigate to the root directory of this repository, and type the following command:
