@@ -1,4 +1,4 @@
-include::topics/shared/templates/document-attributes.adoc[]
+include::topics/shared/attributes.adoc[]
 
 :my-title-a:
 :product-build:

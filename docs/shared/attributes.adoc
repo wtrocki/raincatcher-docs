@@ -32,3 +32,10 @@
 :MyTitleAUpstreamBookName: My Title A (Upstream)
 :MyTitleBUpstreamBookName: My Title B (Upstream)
 :MyTitleCUpstreamBookName: My Title C (Upstream)
+
+
+
+
+// -- TOOLING METADATA: DO NOT CHANGE ANYTHING BELOW THIS LINE! --
+:RepoTemplateVersion: 1.0
+:RepoTemplateCodeName: multi-topic-level
