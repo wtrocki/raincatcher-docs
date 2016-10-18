@@ -13,6 +13,17 @@ L10N=
 # This can be overriden in each book's individual buildGuide.sh
 LANG_CODE=ja-JP
 
+# Remove once this script has been verified to work with multi-topic-level
+echo "--------------------------------------"
+echo "WARNING: This script has not yet been verified to work with"
+echo "multi-topic-level-repo-template! This script requires testing"
+echo "and possibly modification! If you manage to make this script"
+echo "work correctly with the repo structure, please submit a pull"
+echo "request with your changes. "
+echo "Rewards are possible. Thank you. --The management"
+echo "--------------------------------------"
+exit 1
+
 usage(){
   cat <<EOM
 USAGE: $0 [OPTION]... <guide>
@@ -60,7 +71,12 @@ if [ $# -gt 0 ]; then
 else
   echo "=== Building all the guides ==="
   # Recurse through the guide directories and build them.
-  subdirs=`find . -maxdepth 1 -type d ! -iname ".*" ! -iname "topics" | sort`
+  
+  # The following is the original command that worked with the EAP structure:
+   # subdirs=`find . -maxdepth 1 -type d ! -iname ".*" ! -iname "topics" | sort` 
+   
+   # This should work for the multi-topic-level structure but has not been tested:
+  subdirs=`find . -maxdepth 1 -type d ! -iname ".*" ! -iname "topics" ! -iname "shared" | sort` 
 fi
 echo $PWD
 for subdir in $subdirs
