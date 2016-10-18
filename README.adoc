@@ -1,4 +1,10 @@
-include::topics/shared/attributes.adoc[]
+// The following include would be superior so that the :RepoTemplateVersion and RepoTemplateCodeName attributes are defined in a single place, but includes aren't yet supported in AsciiDoc READMEs on Gitlab. 
+// include::topics/shared/attributes.adoc[]
+// Vote with your emojis! https://gitlab.com/gitlab-org/gitlab-ce/issues/18045
+
+// These two attributes must match their eponymous counterparts in docs/shared/attributes.adoc, or things are b0rked!
+:RepoTemplateVersion: 1.0
+:RepoTemplateCodeName: multi-topic-level
 
 # {RepoTemplateCodeName}  version {RepoTemplateVersion} Documentation Git Repository
 
