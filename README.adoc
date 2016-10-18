@@ -6,7 +6,7 @@
 :RepoTemplateVersion: 1.0
 :RepoTemplateCodeName: multi-topic-level
 
-# {RepoTemplateCodeName}  version {RepoTemplateVersion} Documentation Git Repository
+# {RepoTemplateCodeName}  version {RepoTemplateVersion} Template Git Repository
 
 This is a fully-customizable Git repository that can be quickly and easily cloned to begin new documentation projects, or migrate old documentation projects into the repository structure that Content Services is converging on as part of its FY17 goals. 
 
@@ -83,7 +83,24 @@ In addition, this repository structure has been designed to work with the follow
 
 ## Use this Repository Template
 
-Clone this repository to your local machine. You may want to build the books in this example repository and review the output to understand how it works before you make any changes.
+1. Clone this repository:
+
+    $ git clone https://github.com/silasrh/multi-topic-level-repo-template.git
+    
+2. Delete the `.git` configuration and data directory:
+
+    $ cd multi-topic-level-repo-template
+    $ rm .git -fr
+    
+3. Modify the global attributes in `docs/shared/attributes.adoc` for your project.
+
+4. Make modifications to the first title:
+    1. Copy the entire `docs/My_Title_A` directory and its contents to `docs/_<your_actual_first_title_name>_`. 
+    2. Rename the `enterprise` and `upstream_1` directories to match the names of your distros.
+    3. Define the *my-title-a* and *product-build* attributes in `master.adoc`.
+    Ensure the first title builds after the modifications and then repeat these steps for each additional title.
+    
+5. If you are migrating existing content to this repository template, it is highly recommended to put all content into the `topics` directories for the appropriate titles, even if the content *is not* shared between distros. (There are more reasons for putting content that isn't shared between distros of a title or multiple titles into the `_<title>_/topics` directory, at least at first, but they are beyond the scope of this README. For a discussion of the reasoning, which touches on content development workflow, contact mailto:dhensley@redhat.com[Silas].)
 
 //// Fix buildGuides.sh to work with multi-topic-level and re-include this info
 ### Build the Example Books
