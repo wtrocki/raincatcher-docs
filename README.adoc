@@ -30,7 +30,7 @@ In addition, this repository structure has been designed to work with the follow
 ## Repository Structure Overview
 
 ----
-├── README.md
+├── README.adoc
 ├── docs
 │   ├── my-title-a
 │   │   ├── enterprise
@@ -42,9 +42,7 @@ In addition, this repository structure has been designed to work with the follow
 │   │   │   ├── topic-1.adoc
 │   │   │   ├── topic-2.adoc
 │   │   │   ├── topic-4.adoc
-│   │   │   ├── topic-5.adoc
-│   │   │   ├── topic-6.adoc
-│   │   │   └── topic-7.adoc
+│   │   │   └── topic-5.adoc
 │   │   └── upstream-1
 │   │       ├── master-docinfo.xml
 │   │       ├── master.adoc
@@ -59,9 +57,7 @@ In addition, this repository structure has been designed to work with the follow
 │   │   │   ├── topic-1.adoc
 │   │   │   ├── topic-2.adoc
 │   │   │   ├── topic-4.adoc
-│   │   │   ├── topic-5.adoc
-│   │   │   ├── topic-6.adoc
-│   │   │   └── topic-7.adoc
+│   │   │   └── topic-5.adoc
 │   │   └── upstream-1
 │   │       ├── master-docinfo.xml
 │   │       ├── master.adoc
@@ -77,7 +73,6 @@ In addition, this repository structure has been designed to work with the follow
     ├── asciidoc-writing-guide.adoc
     └── scripts
         └── buildGuides.sh
-        
 ----
 ## How to Use This Repository Template
 
@@ -144,6 +139,7 @@ Copy the structure into your own local repository and make the following changes
   * `scripts/buildGuides.sh` moved to `resources/scripts/buildGuides.sh`.
   * latest version of the EAP team's `asciidoc-writing-guide.adoc` added to the `resources` directory for referential convenience.
   * RepoTemplateVersion and RepoTemplateCodeName attributes defined in `docs/shared/attributes.adoc`.
+  * remove `topic-6` and `topic-7` because they are unnecessary for illustrative purposes.
 Pre-1.0::
 	* contains typo in repository structure diagram: "images — This folder contains all imagess"
 	* `buildGuides.sh` (98 lines, 86 sloc) does not work correctly because it had not been updated from the script developed by EAP
