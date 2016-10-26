@@ -15,14 +15,12 @@ This is a fully-customizable Git repository that can be quickly and easily clone
 This template repository uses the terms below as defined:
 
 title::
-  a _title_ is a _deliverable_, i.e. a piece of content that is publishable using our toolchain. The toolchain refers to an AsciiDoc or DocBook deliverable publishable with it as a _title_, and this repo template adopts the same terminology.
+  A _title_ is a _deliverable_, i.e. a piece of content that is publishable using our toolchain. The toolchain refers to an AsciiDoc or DocBook deliverable publishable with it as a _title_, and this repo template adopts the same terminology.
   FIXME: note that title is also the name of a top-level directory that contains deliverables, each of which is defined by a master.adoc file in <titles>/<title>/<distro> subdirectories, provided the name change from docs -> title happens.
 distro::
-		a _distro_, which is shorthand for "distribution", is similar to the concept of a Linux distro or distribution, which is a customized "spin" of Linux. A _distro_ for our purposes is a certain set of docs that is released under a certain product or project name. FIXME: add example, etc.
+		A _distro_, which is shorthand for "distribution", is similar to the concept of a Linux distro or distribution, which is a customized "spin" of Linux. A _distro_ for our purposes is a certain set of docs that is released under a certain product or project name. FIXME: add example, etc.
 topic::
-		FIXME: add description
-shared::
-  FIXME: add description
+  A _topic_ is considered to be an atomic chunk of content within a file. It may or may not be self-contained. In the future, it is likely to adhere to a content model such as concept, task or reference, and may fit into larger structures such as modules/assemblies to represent use cases.
 		
 == Properties of *{RepoTemplateCodeName} *
 
