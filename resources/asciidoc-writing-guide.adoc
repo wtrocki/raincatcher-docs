@@ -1,6 +1,6 @@
 :imagesdir: images
 
-include::../docs/shared/attributes.adoc[]
+// include::../docs/shared/attributes.adoc[]
 
 [[jboss_eap_asciidoc_writing_guide]]
 = AsciiDoc Guide [static copy of the EAP AsciiDoc Writing Guide]
