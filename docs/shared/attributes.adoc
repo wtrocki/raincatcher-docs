@@ -4,7 +4,7 @@
 :toc:
 :toclevels: 4
 :numbered:
-:imagesdir: topics/images
+:imagesdir: topics/shared/images
 //
 // Product content attributes
 //
