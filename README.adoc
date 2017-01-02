@@ -93,6 +93,14 @@ In addition, this repository structure has been designed to work with the follow
 ----
 == How to Use This Repository Template
 
+=== Getting the Repository Template
+
+The easiest way to use this repository template is to grab the latest tarball release from https://github.com/silasrh/multi-topic-level-repo-template/releases and extract its contents. The tarball is identical to a fresh clone of the Git repository except that it does not contain the .git directory.
+
+Note: the latest release as on 2 Jan. 2017 is 0.9, which is considered to be "production ready" for documentation projects.
+
+Alternatively you can:
+
 1. Clone this repository:
 
     $ git clone https://github.com/silasrh/multi-topic-level-repo-template.git
@@ -103,6 +111,8 @@ Important: in most circumstances, deleting a .git directory is a really bad idea
 
     $ cd multi-topic-level-repo-template
     $ rm .git -fr
+    
+=== Configuring the Repository Template
     
 3. Modify the global attributes in `docs/shared/attributes.adoc` for your project.
 
