@@ -1,0 +1,28 @@
+= Feedhenry Raincatcher 
+:sectnums:
+:toc: left
+:toclevels: 3
+
+:toc!:
+
+== Overview
+
+RainCatcher framework consist of set of modules written in TypeScript language that are packaged and distributed via npm.
+
+Main goals for Raincatcher Framework:
+
+- Provide set of reusable components that can simplify mobile and cloud development using MEAN stack
+- Allow developers to write secure, offline ready mobile enabled websites and mobile applications. 
+- Provide flow oriented framework for Workforce Management applications.
+
+=== Architecture
+- Raincatcher-Demo applications 
+- Raincatcher-WFM-steps implementations 
+- Raincatcher-WFM 
+- Raincatcher-Core
+
+=== Raincatcher Core quick start
+
+=== Raincatcher WFM quick start
+
+=== Raincatcher Security considerations
