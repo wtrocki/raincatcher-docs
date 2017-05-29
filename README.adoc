@@ -1,6 +1,8 @@
-# Feedhenry Raincatcher 
-## Overview
+Feedhenry Raincatcher 
+=================
 
+Overview
+----------------
 RainCatcher framework consist of set of modules writen in TypeScript language that are packaged and distributed via npm.
 
 Main goals for Raincatcher framework:
