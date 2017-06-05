@@ -17,8 +17,9 @@ Please follow sections bellow for complete list of supported modules
 == {ProductName} Security
 
 Security implementation:
-- Keycloak ()
-- Passport.js
+
+ * Keycloak ()
+ * Passport.js
 
 === Keycloak provider 
 

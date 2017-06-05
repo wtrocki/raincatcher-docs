@@ -437,30 +437,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_workflow_managment_framework">1.3.1. Workflow Managment Framework</a></li>
 <li><a href="#_rapid_application_development_framework">1.3.2. Rapid Application Development Framework</a></li>
 <li><a href="#_demo_application">1.3.3. Demo application</a></li>
+<li><a href="#_raincatcher_module_relationships">1.3.4. RainCatcher module relationships</a></li>
+<li><a href="#_module_structure">1.3.5. Module structure</a></li>
+<li><a href="#_default_exports">1.3.6. Default exports</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_architecture">2. Architecture</a></li>
-<li><a href="#_raincatcher_core_modules">3. RainCatcher Core Modules</a>
-<ul class="sectlevel2">
-<li><a href="#_raincatcher_wfm_module">3.1. RainCatcher WFM module</a></li>
-<li><a href="#_raincatcher_logger_module">3.2. RainCatcher Logger module</a></li>
-<li><a href="#_raincatcher_datastore_module">3.3. RainCatcher DataStore module</a></li>
-<li><a href="#_raincatcher_datasync_module">3.4. RainCatcher DataSync module</a></li>
-<li><a href="#_raincatcher_webapi_module">3.5. RainCatcher WebApi module</a></li>
-<li><a href="#_raincatcher_security">3.6. RainCatcher Security</a>
+<li><a href="#_raincatcher_wfm_module">1.4. RainCatcher WFM module</a></li>
+<li><a href="#_raincatcher_logger_module">1.5. RainCatcher Logger module</a></li>
+<li><a href="#_raincatcher_datastore_module">1.6. RainCatcher DataStore module</a></li>
+<li><a href="#_raincatcher_datasync_module">1.7. RainCatcher DataSync module</a></li>
+<li><a href="#_raincatcher_webapi_module">1.8. RainCatcher WebApi module</a></li>
+<li><a href="#_raincatcher_security">1.9. RainCatcher Security</a>
 <ul class="sectlevel3">
-<li><a href="#_keycloak_provider">3.6.1. Keycloak provider</a></li>
-<li><a href="#_passport_js_provider">3.6.2. Passport.js provider</a></li>
+<li><a href="#_keycloak_provider">1.9.1. Keycloak provider</a></li>
+<li><a href="#_passport_js_provider">1.9.2. Passport.js provider</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_raincatcher_security_2">4. RainCatcher Security</a></li>
-<li><a href="#_development_and_contribution_guide">5. Development and Contribution Guide</a></li>
-<li><a href="#_production_setup">6. Production setup</a></li>
-<li><a href="#_raincatcher_api_reference">7. RainCatcher API Reference</a></li>
+<li><a href="#_raincatcher_security_2">2. RainCatcher Security</a></li>
+<li><a href="#_development_and_contribution_guide">3. Development and Contribution Guide</a></li>
+<li><a href="#_production_setup">4. Production setup</a></li>
+<li><a href="#_raincatcher_api_reference">5. RainCatcher API Reference</a></li>
 </ul>
 </div>
 </div>
@@ -517,10 +515,12 @@ RainCatcher provides Workforce Managment oriented framework for Workforce Manage
 <h4 id="_workflow_managment_framework">1.3.1. Workflow Managment Framework</h4>
 <div class="paragraph">
 <p>RainCatcher Workflow Managment Framework build BPMN compliant workflow management solution.
-WFM framework allows to build advanced Business Process Management solutions.</p>
+WFM framework allows to build advanced Business Process Management solutions.
+Framework helps to write solutions that connects a business' back-office with its fleet of mobilized employees.</p>
 </div>
 <div class="paragraph">
-<p>TODO add diagram etc.</p>
+<p>Users can write their custom Tasks (Workflow Steps) that will implement any business logic required to finish it.
+Framework abstract from any web or mobile application libraries, allowing developers to focus on impmentation of the process.</p>
 </div>
 </div>
 <div class="sect3">
@@ -598,81 +598,89 @@ WFM framework allows to build advanced Business Process Management solutions.</p
 </ul>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_architecture">2. Architecture</h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_raincatcher_module_relationships">1.3.4. RainCatcher module relationships</h4>
 <div class="paragraph">
 <p><span class="image"><img src="images/architecture.png" alt="Top Level Architecture"></span></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Raincatcher-Demo applications</p>
-</li>
-<li>
-<p>Raincatcher-WFM-steps implementations</p>
-</li>
-<li>
-<p>Raincatcher-WFM</p>
-</li>
-<li>
-<p>Raincatcher-Core</p>
-</li>
-</ul>
+</div>
+<div class="sect3">
+<h4 id="_module_structure">1.3.5. Module structure</h4>
+<div class="paragraph">
+<p>RainCatcher modules are written in [TypeScript](<a href="http://typescriptlang.org" class="bare">http://typescriptlang.org</a>).</p>
+</div>
+<div class="paragraph">
+<p>The main files are modules that by default export a class containing the main implementation for the module&#8217;s intent,with a named export containing a public interface that should be depended upon, and reimplemented.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import Implementation, { PublicInterface } from '@raincatcher/module';</code></pre>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_raincatcher_core_modules">3. RainCatcher Core Modules</h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_default_exports">1.3.6. Default exports</h4>
+<div class="paragraph">
+<p>Each module exports by default an implementation and set of interfaces by name.
+Default implementation will usually implement most common use case for module.
+Along with the default export, all modules include a public interface definition that are depended upon by other RainCatcher modules instead of depending on the implementation itself.
+= RainCatcher Core Modules</p>
+</div>
 <div class="paragraph">
 <p>RainCatcher solution is distributed as set of node.js modules.
 Modules provide abstraction layer and can be extended thanks to provided set of interfaces and abstract implementations.
 Please follow sections bellow for complete list of supported modules</p>
 </div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="_raincatcher_wfm_module">3.1. RainCatcher WFM module</h3>
+<h3 id="_raincatcher_wfm_module">1.4. RainCatcher WFM module</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_raincatcher_logger_module">3.2. RainCatcher Logger module</h3>
+<h3 id="_raincatcher_logger_module">1.5. RainCatcher Logger module</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_raincatcher_datastore_module">3.3. RainCatcher DataStore module</h3>
+<h3 id="_raincatcher_datastore_module">1.6. RainCatcher DataStore module</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_raincatcher_datasync_module">3.4. RainCatcher DataSync module</h3>
+<h3 id="_raincatcher_datasync_module">1.7. RainCatcher DataSync module</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_raincatcher_webapi_module">3.5. RainCatcher WebApi module</h3>
+<h3 id="_raincatcher_webapi_module">1.8. RainCatcher WebApi module</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_raincatcher_security">3.6. RainCatcher Security</h3>
+<h3 id="_raincatcher_security">1.9. RainCatcher Security</h3>
 <div class="paragraph">
-<p>Security implementation:
-- Keycloak ()
-- Passport.js</p>
+<p>Security implementation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Keycloak ()</p>
+</li>
+<li>
+<p>Passport.js</p>
+</li>
+</ul>
 </div>
 <div class="sect3">
-<h4 id="_keycloak_provider">3.6.1. Keycloak provider</h4>
+<h4 id="_keycloak_provider">1.9.1. Keycloak provider</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_passport_js_provider">3.6.2. Passport.js provider</h4>
+<h4 id="_passport_js_provider">1.9.2. Passport.js provider</h4>
 
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_raincatcher_security_2">4. RainCatcher Security</h2>
+<h2 id="_raincatcher_security_2">2. RainCatcher Security</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Elements to be covered</p>
@@ -711,19 +719,19 @@ Please follow sections bellow for complete list of supported modules</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_development_and_contribution_guide">5. Development and Contribution Guide</h2>
+<h2 id="_development_and_contribution_guide">3. Development and Contribution Guide</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_production_setup">6. Production setup</h2>
+<h2 id="_production_setup">4. Production setup</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_raincatcher_api_reference">7. RainCatcher API Reference</h2>
+<h2 id="_raincatcher_api_reference">5. RainCatcher API Reference</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="./api/index.html">API reference</a></p>
