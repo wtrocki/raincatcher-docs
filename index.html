@@ -505,8 +505,8 @@ RainCatcher provides Workforce Managment oriented framework for Workforce Manage
 </div>
 <div class="paragraph">
 <p>Solution consist of two fully independent frameworks:
-- Workflow Managment Framework
-- Rapid Application Development Framework</p>
+ * Workflow Managment Framework
+ * Rapid Application Development Framework</p>
 </div>
 <div class="paragraph">
 <p>As extension to frameworks above RainCatcher provides set of example module implementations as part of demo applications.</p>
@@ -516,10 +516,23 @@ RainCatcher provides Workforce Managment oriented framework for Workforce Manage
 <div class="paragraph">
 <p>RainCatcher Workflow Managment Framework build BPMN compliant workflow management solution.
 WFM framework allows to build advanced Business Process Management solutions.
-Framework helps to write solutions that connects a business' back-office with its fleet of mobilized employees.</p>
+Framework helps to write solutions that connects a business back-office with its fleet of mobilized employees.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Task: defines single unit of work for business process</p>
+</li>
+<li>
+<p>Flow: contain ordered set of tasks and handlers for executing tasks in proper order</p>
+</li>
+<li>
+<p>Process: instance of flow containing current progress and business objects.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Users can write their custom Tasks (Workflow Steps) that will implement any business logic required to finish it.
+<p>Users can write custom Tasks (Workflow Steps) that will implement any business logic and link implementation with any UI solution.
 Framework abstract from any web or mobile application libraries, allowing developers to focus on impmentation of the process.</p>
 </div>
 </div>

@@ -26,8 +26,8 @@ Solution allows developers to write secure, offline ready websites and mobile ap
 {ProductName} provides Workforce Managment oriented framework for Workforce Management applications.
 
 Solution consist of two fully independent frameworks:
-- Workflow Managment Framework
-- Rapid Application Development Framework
+ * Workflow Managment Framework
+ * Rapid Application Development Framework
 
 As extension to frameworks above {ProductName} provides set of example module implementations as part of demo applications. 
 
@@ -37,14 +37,9 @@ As extension to frameworks above {ProductName} provides set of example module im
 WFM framework allows to build advanced Business Process Management solutions. 
 Framework helps to write solutions that connects a business back-office with its fleet of mobilized employees.
 
-- Task
-Defines single unit of work for business process
-
-- Flow
-Contain ordered set of tasks and handlers for executing tasks in proper order
-
-- Process
-Instance of flow containing current progress and business objects.
+ * Task: defines single unit of work for business process
+ * Flow: contain ordered set of tasks and handlers for executing tasks in proper order
+ * Process: instance of flow containing current progress and business objects.
 
 Users can write custom Tasks (Workflow Steps) that will implement any business logic and link implementation with any UI solution.
 Framework abstract from any web or mobile application libraries, allowing developers to focus on impmentation of the process. 
