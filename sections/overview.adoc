@@ -35,9 +35,18 @@ As extension to frameworks above {ProductName} provides set of example module im
 
 {ProductName} Workflow Managment Framework build BPMN compliant workflow management solution.
 WFM framework allows to build advanced Business Process Management solutions. 
-Framework helps to write solutions that connects a business' back-office with its fleet of mobilized employees.
+Framework helps to write solutions that connects a business back-office with its fleet of mobilized employees.
 
-Users can write their custom Tasks (Workflow Steps) that will implement any business logic required to finish it. 
+- Task
+Defines single unit of work for business process
+
+- Flow
+Contain ordered set of tasks and handlers for executing tasks in proper order
+
+- Process
+Instance of flow containing current progress and business objects.
+
+Users can write custom Tasks (Workflow Steps) that will implement any business logic and link implementation with any UI solution.
 Framework abstract from any web or mobile application libraries, allowing developers to focus on impmentation of the process. 
 
 ===  Rapid Application Development Framework
