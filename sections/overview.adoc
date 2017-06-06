@@ -80,7 +80,7 @@ image:images/architecture.png[Top Level Architecture]
 
 ===  Module structure
 
-RainCatcher modules are written in [TypeScript](http://typescriptlang.org).
+RainCatcher modules are written in link:http://typescriptlang.org[TypeScript].
 
 The main files are modules that by default export a class containing the main implementation for the module's intent,with a named export containing a public interface that should be depended upon, and reimplemented.
 
