@@ -1,28 +1,23 @@
-= Feedhenry Raincatcher 
+= image:./images/raincatcher.svg[logo,500,400]
+Reference Documentation for FeedHenry Raincatcher
 :sectnums:
 :toc: left
-:toclevels: 3
+:toclevels: 5
+:last-update-label!:
+:FeedHenryProduct: 
+:ProductName: RainCatcher
 
 :toc!:
 
-== Overview
+// Push titles down one level
+:leveloffset: 1
+include::sections/overview.adoc[tabsize=4]
+include::sections/modules.adoc[tabsize=4]
+include::sections/security.adoc[tabsize=4]
+include::sections/development.adoc[tabsize=4]
+include::sections/production.adoc[tabsize=4]
+:leveloffset: 0
 
-RainCatcher framework consist of set of modules written in TypeScript language that are packaged and distributed via npm.
+== {ProductName} API Reference
 
-Main goals for Raincatcher Framework:
-
-- Provide set of reusable components that can simplify mobile and cloud development using MEAN stack
-- Allow developers to write secure, offline ready mobile enabled websites and mobile applications. 
-- Provide flow oriented framework for Workforce Management applications.
-
-=== Architecture
-- Raincatcher-Demo applications 
-- Raincatcher-WFM-steps implementations 
-- Raincatcher-WFM 
-- Raincatcher-Core
-
-=== Raincatcher Core quick start
-
-=== Raincatcher WFM quick start
-
-=== Raincatcher Security considerations
+link:./api/index.html[API reference] 

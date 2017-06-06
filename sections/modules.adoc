@@ -1,0 +1,26 @@
+= {ProductName} Core Modules
+
+{ProductName} solution is distributed as set of node.js modules.
+Modules provide abstraction layer and can be extended thanks to provided set of interfaces and abstract implementations.
+Please follow sections bellow for complete list of supported modules
+
+== {ProductName} WFM module
+
+== {ProductName} Logger module
+
+== {ProductName} DataStore module
+
+== {ProductName} DataSync module
+
+== {ProductName} WebApi module
+
+== {ProductName} Security
+
+Security implementation:
+
+ * Keycloak ()
+ * Passport.js
+
+=== Keycloak provider 
+
+=== Passport.js provider

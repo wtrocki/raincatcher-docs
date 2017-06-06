@@ -1,0 +1,100 @@
+= Overview 
+
+This section provides a overview of {ProductName} documentation. 
+You can read this document in a linear fashion, or you can skip sections if something doesn’t interest you.
+
+==  About the documentation
+
+The  {ProductName} documentation is available as html files generated from ascidocs documents.
+You can view source code of this page on github: http://github.com/feedhenry-raincatcher/feedhenry-raincatcher.github.io
+
+== Getting started 
+
+To quickly start write mobile enabled Workflow Managment applications please follow our guides:
+
+- link:./guides/wfm.html[WFM Guide] 
+Getting Started for Workflow Management Solutions.
+
+- link:./guides/framework.html[Framework Guide] 
+Getting Started with {ProductName} core components.
+
+== Introduction
+
+{ProductName}  consist of set of node.js modules written in TypeScript language that are packaged and distributed as 
+{ProductName} provides a set of reusable components that can simplify mobile, web and cloud application development.
+Solution allows developers to write secure, offline ready websites and mobile applications.
+{ProductName} provides Workforce Managment oriented framework for Workforce Management applications.
+
+Solution consist of two fully independent frameworks:
+- Workflow Managment Framework
+- Rapid Application Development Framework
+
+As extension to frameworks above {ProductName} provides set of example module implementations as part of demo applications. 
+
+===  Workflow Managment Framework 
+
+{ProductName} Workflow Managment Framework build BPMN compliant workflow management solution.
+WFM framework allows to build advanced Business Process Management solutions. 
+Framework helps to write solutions that connects a business back-office with its fleet of mobilized employees.
+
+- Task
+Defines single unit of work for business process
+
+- Flow
+Contain ordered set of tasks and handlers for executing tasks in proper order
+
+- Process
+Instance of flow containing current progress and business objects.
+
+Users can write custom Tasks (Workflow Steps) that will implement any business logic and link implementation with any UI solution.
+Framework abstract from any web or mobile application libraries, allowing developers to focus on impmentation of the process. 
+
+===  Rapid Application Development Framework
+
+{ProductName} Rapid Application Development Framework allows to build production-grade Node.js and Cordova based applications.
+
+image:images/technologies.png[Technologies]
+
+Main targets for framework:
+
+* Rapid, production ready application development framework.
+* Covers Mobile, web and server side application development
+* Written in TypeScript (with support JavaScript development)
+* Secure out of the box thanks to multiple security providers (Keycloak, Passport.js)
+* Full support for offline enabled applications thanks to FeedHenry Sync
+* Extensibility provided by set of TypeScript based interfaces
+* Provide A sleek, modern, mobile enabled front-end reference applications
+* Provides abstraction layer for common application elements:
+    ** Data access 
+    ** Security
+    ** Logging 
+    ** Restfull API creation 
+    ** Unit testing
+
+Framework abstract from any application logic and technologies allowing developers to extend it for their needs.
+
+===  Demo application
+
+- Set of example implementations for Workflow Managment Solutions (Workorder, WorkorderResult)
+- Website, Mobile and server demo applications serving as reference implementation for the framework.
+
+=== RainCatcher module relationships
+
+image:images/architecture.png[Top Level Architecture]
+
+
+===  Module structure
+
+RainCatcher modules are written in [TypeScript](http://typescriptlang.org).
+
+The main files are modules that by default export a class containing the main implementation for the module's intent,with a named export containing a public interface that should be depended upon, and reimplemented.
+
+```typescript
+import Implementation, { PublicInterface } from '@raincatcher/module';
+```
+
+=== Default exports
+
+Each module exports by default an implementation and set of interfaces by name.
+Default implementation will usually implement most common use case for module.
+Along with the default export, all modules include a public interface definition that are depended upon by other RainCatcher modules instead of depending on the implementation itself.

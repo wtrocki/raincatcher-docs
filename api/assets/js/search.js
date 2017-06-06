@@ -1,0 +1,3 @@
+﻿var typedoc = typedoc || {};
+            typedoc.search = typedoc.search || {};
+            typedoc.search.data = {"kinds":{"1":"External module","256":"Interface","1024":"Property"},"rows":[{"id":0,"kind":1,"name":"\"test\"","url":"modules/_test_.html","classes":"tsd-kind-external-module"},{"id":1,"kind":256,"name":"Raincatcher","url":"interfaces/_test_.raincatcher.html","classes":"tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported","parent":"\"test\""},{"id":2,"kind":1024,"name":"wip","url":"interfaces/_test_.raincatcher.html#wip","classes":"tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported","parent":"\"test\".Raincatcher"}]};
