@@ -26,6 +26,7 @@ Solution allows developers to write secure, offline ready websites and mobile ap
 {ProductName} provides Workforce Managment oriented framework for Workforce Management applications.
 
 Solution consist of two fully independent frameworks:
+
  * Workflow Managment Framework
  * Rapid Application Development Framework
 
