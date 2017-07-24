@@ -1,14 +1,9 @@
-// The following include would be superior so that the :RepoTemplateVersion and RepoTemplateCodeName attributes are defined in a single place, but includes aren't yet supported in AsciiDoc READMEs on Gitlab. 
-// include::topics/shared/attributes.adoc[]
-// Vote with your emojis! https://gitlab.com/gitlab-org/gitlab-ce/issues/18045
-
-// These two attributes must match their eponymous counterparts in docs/shared/attributes.adoc, or things are b0rked!
 :RepoTemplateVersion: 1.0
-:RepoTemplateCodeName: multi-topic-level
+:RepoTemplateCodeName: mobile-docs
 
 = {RepoTemplateCodeName}  version {RepoTemplateVersion} Template Git Repository
 
-This is a fully-customizable Git repository that can be quickly and easily cloned to begin new documentation projects, or migrate old documentation projects into the repository structure that Content Services is converging on as part of our FY17 goals. 
+This is a fully-customizable Git repository that can be quickly and easily cloned to begin new mobile doc projects. It is a fork of https://github.com/silasrh/multi-topic-level-repo-template
 
 == Terminology
 
@@ -42,7 +37,7 @@ In addition, this repository structure has been designed to work with the follow
 * All content development is performed in the Github repository, for any number of titles and distros, provided that release versions are more-or-less in sync between those distros. The Github repository is mirrored to Gitlab solely in order to publish using the Docs2Drupal/Docs 2.0 toolchain (i.e. Pantheon).
 * Upstream content development  (by engineering, community members, etc.), for any number of titles and distros, happens in Github. Downstream development (by CCS, engineering), for any number of titles and distros, happens in Gitlab.
 * All content development for any number of titles and distros happens in Gitlab.
-* This repository structure is extremely flexible and should be able to account for any other development models. Contact mailto:dhensley@redhat.com[Silas] if you have any questions about whether this repository structure can work for your project.
+* This repository structure is extremely flexible and should be able to account for any other development models. Contact mailto:dhensley@redhat.com[Silas] or if you have any questions about whether this repository structure can work for your project. 
 
 == Repository Structure Overview
 
@@ -50,7 +45,7 @@ In addition, this repository structure has been designed to work with the follow
 ├── README.adoc
 ├── docs
 │   ├── my-title-a
-│   │   ├── enterprise
+│   │   ├── platform
 │   │   │   ├── master-docinfo.xml
 │   │   │   ├── master.adoc
 │   │   │   └── topics -> ../topics
@@ -65,7 +60,7 @@ In addition, this repository structure has been designed to work with the follow
 │   │       ├── master.adoc
 │   │       └── topics -> ../topics
 │   ├── my-title-b
-│   │   ├── enterprise
+│   │   ├── platform
 │   │   │   ├── master-docinfo.xml
 │   │   │   ├── master.adoc
 │   │   │   └── topics -> ../topics
@@ -93,14 +88,6 @@ In addition, this repository structure has been designed to work with the follow
 ----
 == How to Use This Repository Template
 
-=== Getting the Repository Template
-
-The easiest way to use this repository template is to grab the latest tarball release from https://github.com/silasrh/multi-topic-level-repo-template/releases and extract its contents. The tarball is identical to a fresh clone of the Git repository except that it does not contain the .git directory.
-
-Note: the latest release as on 2 Jan. 2017 is 0.9, which is considered to be "production ready" for documentation projects.
-
-Alternatively you can:
-
 1. Clone this repository:
 
     $ git clone https://github.com/silasrh/multi-topic-level-repo-template.git
@@ -111,8 +98,6 @@ Important: in most circumstances, deleting a .git directory is a really bad idea
 
     $ cd multi-topic-level-repo-template
     $ rm .git -fr
-    
-=== Configuring the Repository Template
     
 3. Modify the global attributes in `docs/shared/attributes.adoc` for your project.
 
@@ -174,7 +159,7 @@ Copy the structure into your own local repository and make the following changes
 1.0::
   * rename `My_Title_A`, `My_Title_B` and `Upstream_1` directories to `my-title-a`, `my-title-b` and `upstream-1` naming patterns to make navigating the Git repo as fast as possible.
   * `docs/shared/templates/document-attributes.adoc` moved to `docs/shared/attributes.adoc`.
-  * all includes of `document-attributes.adoc` changed to correct for new attributes.adoc location.
+  * all includes of `document-attributes.adoc` changed to corr  ect for new attributes.adoc location.
   * `scripts/buildGuides.sh` moved to `resources/scripts/buildGuides.sh`.
   * latest version of the EAP team's `asciidoc-writing-guide.adoc` added to the `resources` directory for referential convenience.
   * RepoTemplateVersion and RepoTemplateCodeName attributes defined in `docs/shared/attributes.adoc`.

@@ -8,15 +8,20 @@
 //
 // Product content attributes
 //
-:ProductName: My Red Hat Product
-:ProductShortName: My Product
+:ProductName: FeedHenry
+:ProductShortName: FeedHenry
 :ProductRelease: 1
 :ProductVersion: 1.0
+
+// Component Names
+:ComponentName:
+:ComponentVersion:
+
 //
 // Documentation publishing attributes used in the master-docinfo.xml file
 //
-:DocInfoProductName: my-red-hat-product
-:DocInfoProductNumber: 1.0
+:DocInfoProductName: Red Hat Mobile Application Platform
+:DocInfoProductNumber: 3.x
 //
 // Book Names: 
 //     Defining the book names in document attributes instead of hard-coding them in 
