@@ -1,0 +1,28 @@
+[[setting-the-bunyan-logging-level]]
+= Setting the Bunyan Logging Level
+
+Determine the logging level you want (see "Related Information(at the bottom of the page)" for more information) and set the Bunyan Logging Level accordingly.
+
+.Prerequisites
+
+* Importing the Bunyan Logging Module (https://github.com/jstaffor/feedhenry-raincatcher.github.io/wiki/Importing-the-Bunyan-Logging-Module)
+
+.Procedure
+
+. Navigate to the Project in the file directory.
+
+. Open the file where you imported the Bunyan Logging Module.
+
+. Directly underneath the code for importing the Bunyan Logging Module, set the <LogLevel>:
++
+[source,json]
+----
+setLogger(new ConsoleLogger(<LogLevel>));
+
+#Example:
+setLogger(new ConsoleLogger(LogLevel.INFO));
+----
+
+.Related Information
+
+* For more information, see "Link to the wfm-logger module"(https://github.com/jstaffor/feedhenry-raincatcher.github.io/wiki/wfm-logger).

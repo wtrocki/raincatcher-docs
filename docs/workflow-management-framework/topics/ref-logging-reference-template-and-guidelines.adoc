@@ -1,0 +1,82 @@
+[[logging-reference-template-and-guidelines]]
+= Logging Reference Template and Guidelines
+
+This section describes:
+
+* Client and Server Logging (link to sub heading)
+* Bunyan and Console Logging Levels (link to sub heading)
+* Understanding the Logging Levels (link to sub heading)
+
+== Client and Server Logging
+
+.Logging for Applicaitons
+|===
+|*Logging Module* |*Application*
+
+|Bunyan
+|Server
+
+|Console
+|Client
+|===
+
+NOTE: Both the Bunyan and Console modules can both be used for local development and platform development.
+
+== Bunyan and Console Logging Levels
+
+.Bunyan Logging Levels
+|===
+|*Value* |*Parameter Type*
+
+|debug
+|string
+
+|info
+|string
+
+|warn
+|string
+
+|error
+|string
+|===
+
+For more information, see link:[https://www.npmjs.com/package/bunyan]Bunyan Levels.
+
+.Console Logging Levels
+|===
+|*Value* |*Parameter Type*
+
+|debug
+|`LogLevel.DEBUG` or string
+
+|info
+|`LogLevel.INFO` or string
+
+|warn
+|`LogLevel.WARN` or string
+
+|error
+|`LogLevel.ERROR` or string
+|===
+
+== Understanding the Logging Levels
+
+The following table illustrates what logging information is displayed for each Logging Level
+
+.Information displayed by level
+|===
+|*Logging Level* |*Information Displayed*
+
+|debug
+|debug, info, warn and error
+
+|info
+|info, warn, and error
+
+|warn
+|warn and info
+
+|error
+|error
+|===

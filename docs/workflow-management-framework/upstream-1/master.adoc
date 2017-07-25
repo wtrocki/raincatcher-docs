@@ -1,0 +1,37 @@
+include::topics/shared/attributes.adoc[]
+
+:workflow-management-framework:
+:product-build:
+
+= {MyTitleUpstreamBookName}
+
+[[introducing-raincatcher]]
+== Introducing {RCNameLong}
+include::topics/topic-2.adoc[leveloffset=+2]
+
+[[preparing-the-local-development-environment]]
+== Preparing the Local Development Environment
+include::topics/shared/topic-shared-1.adoc[leveloffset=+2]
+
+[[getting-started-with-raincatcher]]
+== Getting Started with {RCNameLong}
+
+[[programming-a-raincatcher-project]]
+== Programming a {RCNameLong} Project
+
+[[testing-a-raincatcher-project]]
+== Testing a {RCNameLong} Project
+
+[[troubleshooting-a-raincatcher-project]]
+== Troubleshooting a {RCNameLong} Project
+
+[[wfm-modules-reference]]
+== {RCNameLong} Modules Reference
+
+[appendix]
+== Reference Material
+
+// **********************************
+// * Appendix: Revision Information *
+// **********************************
+include::topics/shared/templates/revision-info.adoc[]

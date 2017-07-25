@@ -8,8 +8,16 @@
 //
 // Product content attributes
 //
-:ProductName: FeedHenry
-:ProductShortName: FeedHenry
+:ProductName: Red Hat Mobile Application Platform
+:ProductShortName: RHMAP
+
+//***NEW START***
+:UpstreamProductName: FeedHenry
+:WFMNameLong: Workflow Management
+:WFMNameShort: WFM
+:RCNameLong: RainCatcher
+//***NEW END***
+
 :ProductRelease: 1
 :ProductVersion: 1.0
 
@@ -29,17 +37,12 @@
 //     book name if necessary. 
 //     Using the pattern ending in 'BookName' makes it easy to grep for occurrences 
 //     throughout the topics 
-//
-:MyTitleABookName: My Title A
-:MyTitleBBookName: My Title B
-:MyTitleCBookName: My Title C
-//
-:MyTitleAUpstreamBookName: My Title A (Upstream)
-:MyTitleBUpstreamBookName: My Title B (Upstream)
-:MyTitleCUpstreamBookName: My Title C (Upstream)
 
+//***NEW***RHMAP docs
+:MyTitleABookName: Workflow Management Framework
 
-
+//***NEW***Upstream-1 docs
+:MyTitleUpstreamBookName: RainCatcher Framework
 
 // -- TOOLING METADATA: DO NOT CHANGE ANYTHING BELOW THIS LINE! --
 :RepoTemplateVersion: 0.9
