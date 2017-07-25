@@ -1,0 +1,9 @@
+[[topic_1]]
+= Topic 1
+
+This is topic_1 with information about {ProductName} {WFMNameLong}.
+
+[[topic_1_section_1]]
+== Section 1
+
+This is topic_1_section_1 with information about {ProductShortName} {WFMNameShort}.

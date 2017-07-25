@@ -1,0 +1,8 @@
+[[logging-module]]
+= Logging Module
+
+The RainCatcher Logger Module is a logging facade for node.js based applications and it is used by all RainCatcher modules. The RainCatcher Logger Module is is contained in the `raincatcher-core` module.
+
+There are two loggers contained within the RainCatcher Logger Module, the Bunyan module and the Console module.
+By default, Bunyan module and the Console module are not setup and so, no logging exists by default.
+Users can use their own loggers by wrapping their logger into the provided class.

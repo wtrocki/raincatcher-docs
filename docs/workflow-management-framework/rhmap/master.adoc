@@ -1,0 +1,38 @@
+include::topics/shared/attributes.adoc[]
+
+:workflow-management-framework:
+:product-build:
+
+= {MyTitleABookName}
+
+[[introducing-wfm]]
+== Introducing {WFMNameLong}
+include::topics/topic-1.adoc[leveloffset=+2]
+
+[[preparing-the-local-development-environment]]
+== Preparing the Local Development Environment
+include::topics/shared/topic-shared-1.adoc[leveloffset=+2]
+
+[[getting-started-with-wfm]]
+== Getting Started with {WFMNameShort}
+
+[[programming-a-wfm-project]]
+== Programming a {WFMNameShort} Project
+include::importing-wfm-logger-and-setting-a-logging-level.adoc[leveloffset=+2]
+
+[[testing-a-wfm-project]]
+== Testing a {WFMNameShort} Project
+
+[[troubleshooting-a-wfm-project]]
+== Troubleshooting a WFM Project
+
+[[wfm-modules-reference]]
+== WFM Modules Reference
+
+[appendix]
+== Reference Material
+
+// **********************************
+// * Appendix: Revision Information *
+// **********************************
+include::topics/shared/templates/revision-info.adoc[]

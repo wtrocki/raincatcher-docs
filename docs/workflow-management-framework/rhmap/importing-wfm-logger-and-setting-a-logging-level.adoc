@@ -1,0 +1,25 @@
+include::topics/shared/attributes.adoc[]
+
+[#importing-wfm-logger-and-setting-a-logging-level]
+= Importing WFM Logger and Setting a Logging Level
+
+include::topics/con-logging.adoc[leveloffset=+1]
+
+== Procedure
+
+include::topics/pro-importing-the-bunyan-logging-module.adoc[leveloffset=+2]
+
+include::topics/pro-setting-the-bunyan-logging-level.adoc[leveloffset=+2]
+
+include::topics/pro-importing-the-console-logging-module.adoc[leveloffset=+2]
+
+include::topics/pro-setting-the-console-logging-level.adoc[leveloffset=+2]
+
+== Related Information
+
+include::topics/ref-logging-reference-template-and-guidelines.adoc[leveloffset=+2]
+
+// **********************************
+// * Appendix: Revision Information *
+// **********************************
+include::topics/shared/templates/revision-info.adoc[]
