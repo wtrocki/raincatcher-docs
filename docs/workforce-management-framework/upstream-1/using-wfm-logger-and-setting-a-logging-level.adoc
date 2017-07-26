@@ -1,7 +1,10 @@
 include::topics/shared/attributes.adoc[]
 
-[#importing-wfm-logger-and-setting-a-logging-level]
-= Importing WFM Logger and Setting a Logging Level
+//':chapter:' is a vital parameter. See: http://asciidoctor.org/docs/user-manual/#include-multiple
+:chapter: using-wfm-logger-and-setting-a-logging-level
+
+[[using-wfm-logger-and-setting-a-logging-level]]
+= Using {WFM-RC-NameLong} Logger and Setting a Logging Level
 
 include::topics/con-logging.adoc[leveloffset=+1]
 
@@ -17,9 +20,4 @@ include::topics/pro-setting-the-console-logging-level.adoc[leveloffset=+2]
 
 == Related Information
 
-include::topics/ref-logging-reference-template-and-guidelines.adoc[leveloffset=+2]
-
-// **********************************
-// * Appendix: Revision Information *
-// **********************************
-include::topics/shared/templates/revision-info.adoc[]
+include::topics/ref-logging.adoc[leveloffset=+2]

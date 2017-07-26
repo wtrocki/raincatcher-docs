@@ -1,7 +1,7 @@
 [[importing-the-console-logging-module]]
 = Importing the Console Logging Module
 
-To incorporate the Console logging into a project, the WFM Logging Module is imported and then the Console Logging Module is initialized.
+To incorporate the Console logging into a project, the {WFM-RC-NameShort} Logging Module is imported and then the Console Logging Module is initialized.
 
 .Prerequisites
 
@@ -11,21 +11,23 @@ To incorporate the Console logging into a project, the WFM Logging Module is imp
 
 . Add the following code to the file where you want to import the Console Logging:
 +
-[source,json]
+[source,javascript]
 ----
+// Import logger implementation
 import {ConsoleLogger, logger, setLogger} from '@raincatcher/logger';
 
+// Instaniate logger
 const log = new ConsoleLogger();;
 setLogger(log);
 ----
 +
-. To log a comment, add the following code _after_ the code above:
+. To log a comment, add the following code _after_ the code directly above:
 +
-[source,json]
+[source,javascript]
 ----
 logger.info('This log will render with ConsoleLogger');
 ----
 
 .Related Information
 
-* For more information, see "Link to the wfm-logger module"(https://github.com/jstaffor/feedhenry-raincatcher.github.io/wiki/wfm-logger).
+* For more information, see xref:logging-reference-template-and-guidelines-{chapter}[Logging Reference Template and Guidelines]
