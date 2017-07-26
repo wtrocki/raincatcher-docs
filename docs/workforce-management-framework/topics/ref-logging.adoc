@@ -1,12 +1,13 @@
-[[logging-reference-template-and-guidelines]]
+[id='logging-reference-template-and-guidelines-{chapter}']
 = Logging Reference Template and Guidelines
 
 This section describes:
 
-* Client and Server Logging (link to sub heading)
-* Bunyan and Console Logging Levels (link to sub heading)
-* Understanding the Logging Levels (link to sub heading)
+* xref:client-and-server-logging-{chapter}[Client and Server Logging]
+* xref:bunyan-and-console-logging-levels-{chapter}[Bunyan and Console Logging Levels]
+* xref:understanding-the-logging-levels-{chapter}[Understanding the Logging Levels]
 
+[id='client-and-server-logging-{chapter}']
 == Client and Server Logging
 
 .Logging for Applicaitons
@@ -22,6 +23,7 @@ This section describes:
 
 NOTE: Both the Bunyan and Console modules can both be used for local development and platform development.
 
+[id='bunyan-and-console-logging-levels-{chapter}']
 == Bunyan and Console Logging Levels
 
 .Bunyan Logging Levels
@@ -60,11 +62,12 @@ For more information, see link:[https://www.npmjs.com/package/bunyan]Bunyan Leve
 |`LogLevel.ERROR` or string
 |===
 
+[id='understanding-the-logging-levels-{chapter}']
 == Understanding the Logging Levels
 
 The following table illustrates what logging information is displayed for each Logging Level
 
-.Information displayed by level
+.Information displayed by Logging Level
 |===
 |*Logging Level* |*Information Displayed*
 

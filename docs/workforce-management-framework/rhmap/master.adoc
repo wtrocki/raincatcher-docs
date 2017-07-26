@@ -1,0 +1,29 @@
+include::topics/shared/attributes.adoc[]
+
+= {WFM-RC-NameLong}
+
+[[introducing-wfm]]
+== Introducing {WFM-RC-NameLong}
+
+[[preparing-the-local-development-environment]]
+== Preparing the Local Development Environment
+
+[[getting-started-with-wfm]]
+== Getting Started with {WFM-RC-NameShort}
+
+[[programming-a-wfm-project]]
+== Programming a {WFM-RC-NameShort} Project
+
+[[testing-a-wfm-project]]
+== Testing a {WFM-RC-NameShort} Project
+
+[[troubleshooting-a-wfm-project]]
+== Troubleshooting a {WFM-RC-NameShort} Project
+
+[[wfm-modules-reference]]
+== {WFM-RC-NameShort} Modules Reference
+
+// **********************************
+// * Appendix: Revision Information *
+// **********************************
+include::topics/shared/templates/revision-info.adoc[]

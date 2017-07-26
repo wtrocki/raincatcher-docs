@@ -1,0 +1,32 @@
+[[importing-the-bunyan-logging-module]]
+= Importing the Bunyan Logging Module
+
+To incorporate the Bunyan logging into a project, the {WFM-RC-NameShort} Logging Module is imported and then the Bunyan Logging Module is initialized.
+
+.Prerequisites
+
+* `raincatcher-core module` must be installed.
+
+.Procedure
+
+. Add the following code to the file where you want to import the Bunyan Logging:
++
+[source,javascript]
+----
+// Import logger implementation
+import {BunyanLogger, logger, setLogger} from '@raincatcher/logger';
+
+// Instaniate logger
+setLogger(new BunyanLogger({name: 'index', level:'info' }));
+----
++
+. To log a comment, add the following code _after_ the code directly above:
++
+[source,javascript]
+----
+logger.info('This log will render with BunyanLogger');
+----
+
+.Related Information
+
+* For more information, see xref:logging-reference-template-and-guidelines-{chapter}[Logging Reference Template and Guidelines]

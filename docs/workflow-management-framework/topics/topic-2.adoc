@@ -1,9 +1,0 @@
-[[topic_2]]
-= Topic 2
-
-This is topic_2 with information about {UpstreamProductName} {RCNameLong}.
-
-[[topic_2_section_1]]
-== Section 1
-
-This is topic_2_section_1 with information about {UpstreamProductName} {RCNameLong}.
