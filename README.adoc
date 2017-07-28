@@ -1,9 +1,25 @@
 :RepoTemplateVersion: 1.0
-:RepoTemplateCodeName: mobile-docs
+:RepoTemplateCodeName: Raincatcher
+:ProductName: Raincatcher
 
-= {RepoTemplateCodeName}  version {RepoTemplateVersion} Template Git Repository
+= {RepoTemplateCodeName}  version {RepoTemplateVersion} 
+
+This repository contains source code of the {ProductName} documentation.
+Documentation is available on: https://feedhenry-raincatcher.github.io/raincatcher-docs
+
+==  Source template
 
 This is a fully-customizable Git repository that can be quickly and easily cloned to begin new mobile doc projects. It is a fork of https://github.com/silasrh/multi-topic-level-repo-template
+
+== Building community edition
+
+    gem install asciidoctor
+    git checkout gh-pages
+    cd docs/workforce-management-framework/upstream-1
+    asciidoctor master.adoc
+    cp master.html ../../../index.html
+    git commit -a -m"Pages update"
+    git push origin +gh-pages
 
 == Terminology
 
