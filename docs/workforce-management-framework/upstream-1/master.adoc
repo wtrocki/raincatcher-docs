@@ -1,13 +1,12 @@
 include::topics/shared/attributes.adoc[]
 
+[[Raincatcher]]
 = {WFM-RC-NameLong}
-Reference Documentation for {WFM-RC-NameLong}
+
 :sectnums:
 :toc: left
 :toclevels: 5
 :last-update-label!:
-
-:toc!:
 
 [[introducing-raincatcher]]
 == Introducing {WFM-RC-NameLong}
@@ -37,4 +36,4 @@ include::using-wfm-logger-and-setting-a-logging-level.adoc[leveloffset=+2]
 // **********************************
 include::topics/shared/templates/revision-info.adoc[]
 
-image:./images/raincatcher.svg[logo,500,400]
+image::./topics/shared/images/raincatcher.svg[logo]

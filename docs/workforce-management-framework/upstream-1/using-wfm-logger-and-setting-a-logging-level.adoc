@@ -8,7 +8,7 @@ include::topics/shared/attributes.adoc[]
 
 include::topics/con-logging.adoc[leveloffset=+1]
 
-== Procedure
+== Procedures
 
 include::topics/pro-importing-the-bunyan-logging-module.adoc[leveloffset=+2]
 
