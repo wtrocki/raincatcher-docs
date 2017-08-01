@@ -32,7 +32,7 @@ This is a fully-customizable Git repository and it was forked from https://githu
 │       ├── attributes.adoc
 │       ├── images
 │       ├── templates
-│       │   └── revision-info.adoc
+│       ├── attributes.adoc
 │       ├── topic-shared-1.adoc
 └── resources
 │   ├── asciidoc-writing-guide.adoc
@@ -65,14 +65,31 @@ They are simply headings.
 Each Chapter will contain one to many User Stories.
 
 In *master.adoc*, the User Stories are formed using references to Modular Doc *.adoc* files.
-The structure of the User Story is defined with headings and the structure is based on an link:https://gitlab.cee.redhat.com/ccs-internal-documentation/Modular_Documentation_Project/tree/master/files[Assembly template].
+The structure of the User Story is defined with headings and the structure is based on an link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Assembly template(TEMPLATE_ASSEMBLY.adoc)].
 
 Modular Docs are *.adoc* files and contain the content and are primarily located in the _topics_ folder.
 Modular Docs are imported into the User Stories.
-There are 3 types of Modular Docs: link:https://gitlab.cee.redhat.com/ccs-internal-documentation/Modular_Documentation_Project/tree/master/files[Concept, Procedure and Reference].
+There are 3 types of Modular Docs:
+
+.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Concept template (TEMPLATE_CONCEPT_concept_template_and_guidelines.adoc)]
+.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Procedure template (TEMPLATE_PROCEDURE_doing_one_procedure.adoc)]
+.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Reference template(TEMPLATE_REFERENCE_reference_template_and_guidelines.adoc)]
 
 To best understand the information above, see the example located in the repo.
 
+== Building the Community Edition
+
+The *master.adoc* file is the only file to build when rendering the files into text.
+Build the example located in the _upstream-1_ folder:
+
+    gem install asciidoctor
+    git checkout gh-pages
+    cd docs/workforce-management-framework/upstream-1
+    asciidoctor master.adoc
+    cp master.html ../../../index.html
+    git commit -a -m"Pages update"
+    git push origin +gh-pages
+    
 === Creating References to Anchors
 
 An anchor (for example: [[Testing the App]]) cannot appear more than once in an *.adoc* file.
@@ -80,7 +97,6 @@ As Modular Doc files are regularly reused in the same *.adoc* file, this results
 See link:http://asciidoctor.org/docs/user-manual/#include-multiple[Including Multiple Anchors] to negate this issue.
 
 To best understand the information above, see the example located in the repo.
-
 
 === Writing a User Story, *not* a Feature
 
@@ -101,21 +117,10 @@ In a user story-based world, docs describe, for example, how to make an omelette
 . Serving the Omelette
 . Other Onion Recipes
 
-A User Story is created using Modular Docs: link:https://gitlab.cee.redhat.com/ccs-internal-documentation/Modular_Documentation_Project/tree/master/files[Concept, Procedure and Reference Templates].
+A User Story is created using the 3 types of Modular Docs:
+
+.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Concept template (TEMPLATE_CONCEPT_concept_template_and_guidelines.adoc)]
+.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Procedure template (TEMPLATE_PROCEDURE_doing_one_procedure.adoc)]
+.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Reference template(TEMPLATE_REFERENCE_reference_template_and_guidelines.adoc)]
 
 To best understand the information above, see the example located in the repo.
-
-== Building the Community Edition
-
-The *master.adoc* file is the only file to build when rendering the files into text.
-Build the example located in the _upstream-1_ folder:
-
-    gem install asciidoctor
-    git checkout gh-pages
-    cd docs/workforce-management-framework/upstream-1
-    asciidoctor master.adoc
-    cp master.html ../../../index.html
-    git commit -a -m"Pages update"
-    git push origin +gh-pages
-  
-
