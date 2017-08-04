@@ -54,8 +54,6 @@ The _topics_ folder contains *.adoc* files which are shared between the _rhmap_ 
 
 The _rhmap_ and _upstream-1_ folder have access to the _topics_ folder via a symbolic link.
 
-To best understand the information above, see the example located in the repo.
-
 === Books, Chapters, User Stories and Modular Docs
 
 The _rhmap_ and _upstream-1_ folder posses their own version of the *master.adoc* file - this is the Book.
@@ -75,8 +73,6 @@ There are 3 types of Modular Docs:
 .  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Procedure template (TEMPLATE_PROCEDURE_doing_one_procedure.adoc)]
 .  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Reference template(TEMPLATE_REFERENCE_reference_template_and_guidelines.adoc)]
 
-To best understand the information above, see the example located in the repo.
-
 == Building the Community Edition
 
 The *master.adoc* file is the only file to build when rendering the files into text.
@@ -90,13 +86,30 @@ Build the example located in the _upstream-1_ folder:
     git commit -a -m"Pages update"
     git push origin +gh-pages
     
-=== Creating References to Anchors
+=== Creating Anchors and xrefs
 
+==== Dynamic Anchor and Dynamic xref
 An anchor (for example: [[Testing the App]]) cannot appear more than once in an *.adoc* file.
 As Modular Doc files are regularly reused in the same *.adoc* file, this results in a build error.
 See link:http://asciidoctor.org/docs/user-manual/#include-multiple[Including Multiple Anchors] to negate this issue.
 
-To best understand the information above, see the example located in the repo.
+==== Dynamic Anchors and Hard-Coded xref
+
+There are occasions when a dynamic xref (for example: xref:ref-logging-{chapter}) will have to be hard coded (for example: xref:ref-logging-user-_story-a_)
+
+This happens when:
+
+* the value inserted at build time for "{chapter}" is set in *User Story A* - the value for "{chapter}" being (:chapter: user-story-_a_)
+* *User Story B* includes the module which contains the anchor "[id='ref-logging-{chapter}']" that the xref points to, and the "{chapter}" value being (:chapter: user-story-_b_)
+* when *master.adoc* is built, "xref:ref-logging-user-story-_a_" _does not exist_ however "xref:ref-logging-user-story-_b_" _does exist_
+ 
+The solution is a hard-coded xref:
+
+* for the "xref:ref-logging-{chapter}" being set in *User Story A*
+* hard code the xref, that is, "xref:ref-logging-user-story-_b_"
+* when *master.adoc* is built, "xref:ref-logging-user-story-_b_" _does exist_
+ 
+NOTE: If an xref is used to point to an anchor in a module, and the module itself is not built as part of *master.adoc* - this will cause an error.
 
 === Writing a User Story, *not* a Feature
 
@@ -123,4 +136,4 @@ A User Story is created using the 3 types of Modular Docs:
 .  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Procedure template (TEMPLATE_PROCEDURE_doing_one_procedure.adoc)]
 .  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Reference template(TEMPLATE_REFERENCE_reference_template_and_guidelines.adoc)]
 
-To best understand the information above, see the example located in the repo.
+
