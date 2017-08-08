@@ -54,26 +54,7 @@ The _topics_ folder contains *.adoc* files which are shared between the _rhmap_ 
 
 The _rhmap_ and _upstream-1_ folder have access to the _topics_ folder via a symbolic link.
 
-=== Books, Chapters, User Stories and Modular Docs
-
-The _rhmap_ and _upstream-1_ folder posses their own version of the *master.adoc* file - this is the Book.
-
-The Chapters are found within the Book (*master.adoc*).
-They are simply headings.
-Each Chapter will contain one to many User Stories.
-
-In *master.adoc*, the User Stories are formed using references to Modular Doc *.adoc* files.
-The structure of the User Story is defined with headings and the structure is based on an link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Assembly template(TEMPLATE_ASSEMBLY.adoc)].
-
-Modular Docs are *.adoc* files and contain the content and are primarily located in the _topics_ folder.
-Modular Docs are imported into the User Stories.
-There are 3 types of Modular Docs:
-
-.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Concept template (TEMPLATE_CONCEPT_concept_template_and_guidelines.adoc)]
-.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Procedure template (TEMPLATE_PROCEDURE_doing_one_procedure.adoc)]
-.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Reference template(TEMPLATE_REFERENCE_reference_template_and_guidelines.adoc)]
-
-== Building the Community Edition
+=== Building the Community Edition
 
 The *master.adoc* file is the only file to build when rendering the files into text.
 Build the example located in the _upstream-1_ folder:
@@ -111,6 +92,23 @@ The solution is a hard-coded xref:
  
 NOTE: If an xref is used to point to an anchor in a module, and the module itself is not built as part of *master.adoc* - this will cause an error.
 
+== Contributing Documentation Content
+
+=== Books, Chapters, User Stories and Modular Docs
+
+The _rhmap_ and _upstream-1_ folder posses their own version of the *master.adoc* file - this is the Book.
+
+The Chapters are found within the Book (*master.adoc*).
+They are simply headings.
+Each Chapter will contain one to many User Stories.
+
+In *master.adoc*, the User Stories are formed using references to Modular Doc *.adoc* files.
+The structure of the User Story is defined with headings and the structure is based on an link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Assembly template(TEMPLATE_ASSEMBLY.adoc)].
+
+Modular Docs are *.adoc* files and contain the content and are primarily located in the _topics_ folder.
+Modular Docs are imported into the User Stories.
+There are 3 types of Modular Docs, for more information, see xref:modular-docs[Types of Modular Docs].
+
 === Writing a User Story, *not* a Feature
 
 IMPORTANT: It is vital that content is created with a User Story in mind
@@ -118,6 +116,39 @@ IMPORTANT: It is vital that content is created with a User Story in mind
 A Feature describes all available features - it is comprehensive.
 
 A User Story explains how to achieve a specific goal - it is selective.
+
+In a user story-based world, docs describe, for example, how to make an omelette (using onions and eggs).
+
+Modular Docs are used to construct the User Story.
+
+[[modular-docs]]
+=== Modular Docs
+A User Story is created using the 3 types of Modular Docs:
+
+==== Concept
+A concept module describes and explains things such as a product, subsystem, or feature — what a customer needs to understand to do a task.
+A concept module may also explain how things relate and interact with other things.
+The use of graphics and diagrams can speed up understanding of a concept.
+
+.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Concept template (TEMPLATE_CONCEPT_concept_template_and_guidelines.adoc)]
+
+==== Procedure
+A Procedure module is a procedure written with numbered steps — what a customer needs to do to accomplish a goal successfully.
+This paragraph explains why the user performs the task, sets the context of the task, and may explain or list specical considerations specific to this task.
+Keep the information brief and focused on what is needed for this specific task.
+Suggested length is 1 to 3 sentences, can be longer if needed.
+
+.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Procedure template (TEMPLATE_PROCEDURE_doing_one_procedure.adoc)]
+
+==== Reference
+A reference module lists things (such as a list of commands) or has a very regimented structure (such as the consistent structure of man pages).
+A reference module explains the details that a customer needs to know to do a task.
+A reference module is well-organized if users can scan it to quickly find the details they want.
+
+.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Reference template(TEMPLATE_REFERENCE_reference_template_and_guidelines.adoc)]
+
+[[modular-docs]]
+=== Example of a User Story constructed using Modular Docs
 
 In a user story-based world, docs describe, for example, how to make an omelette (using onions and eggs).
 
@@ -130,10 +161,15 @@ In a user story-based world, docs describe, for example, how to make an omelette
 . Serving the Omelette
 . Other Onion Recipes
 
-A User Story is created using the 3 types of Modular Docs:
-
-.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Concept template (TEMPLATE_CONCEPT_concept_template_and_guidelines.adoc)]
-.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Procedure template (TEMPLATE_PROCEDURE_doing_one_procedure.adoc)]
-.  link:https://github.com/redhat-documentation/modular-docs/tree/master/files[Reference template(TEMPLATE_REFERENCE_reference_template_and_guidelines.adoc)]
-
-
+Using this example, the structure of the User Story would be:
+----
+├── making-an-onion-omelette.adoc         (Assembly)
+│   ├── include: con-making-an-onion-melette.adoc  (Concept)
+│   ├── include: pro-setting-up-workplace.adoc     (Procedure)
+│   ├── include: pro-preparing-ingredients.adoc    (Procedure)
+│   ├── include: pro-selecting-spices.adoc         (Procedure)
+│   ├── include: pro-combining-ingredients.adoc    (Procedure)
+│   ├── include: pro-frying-omelette-mixture.adoc  (Procedure)
+│   ├── include: pro-serving-the-omelette.adoc     (Procedure)
+│   ├── include: ref-other-onion-recipes.adoc      (Reference)
+----
