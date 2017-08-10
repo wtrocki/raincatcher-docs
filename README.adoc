@@ -5,7 +5,7 @@
 = {RepoTemplateCodeName}  version {RepoTemplateVersion} 
 
 This repository contains source code of the {ProductName} documentation.
-Documentation is available on: https://feedhenry-raincatcher.github.io/raincatcher-docs
+Documentation is available on: http://raincatcher.feedhenry.io
 
 ==  Overview
 
