@@ -63,7 +63,7 @@ Build the example located in the _upstream-1_ folder:
     git checkout gh-pages
     cd docs/workforce-management-framework/upstream-1
     asciidoctor master.adoc
-    cp master.html ../../../index.html
+    cp master.html ../../index.html
     git commit -a -m"Pages update"
     git push origin +gh-pages
     
