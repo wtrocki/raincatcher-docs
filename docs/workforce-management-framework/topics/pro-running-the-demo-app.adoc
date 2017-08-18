@@ -1,0 +1,82 @@
+[id='pro-running-the-demo-app-{chapter}']
+= Introduction
+
+This section includes:
+
+. xref:pro-cloning-the-git-repository-{chapter}[Cloning the Git Repository]
+. xref:pro-installing-angular-dependencies-{chapter}[Installing Angular Dependencies]
+. xref:pro-installing-core-dependencies-{chapter}[Installing Core Dependencies]
+. xref:pro-starting-the-core-server-{chapter}[Starting the Core Server]
+. xref:pro-running-the-mobile-and-portal-demo-applications-{chapter}[Running the Mobile and Portal Demo Applications]
+
+= Prerequisites
+
+* Node and npm installed (tested on Node {WFM-RC-NodeVersion})
+* git installed
+* access to `git@github.com:feedhenry-raincatcher/raincatcher-angularjs.git`
+* MongoDb installed
+* Redis installed
+
+= Procedure
+
+[id='pro-cloning-the-git-repository-{chapter}']
+[discrete]
+== Cloning the Git Repository
+
+[source,bash]
+----
+git clone git@github.com:feedhenry-raincatcher/raincatcher-angularjs.git
+
+cd raincatcher-angularjs
+----
+
+[id='pro-installing-angular-dependencies-{chapter}']
+[discrete]
+== Installing Repository Dependencies
+
+[source,bash]
+----
+npm install
+npm run bootstrap
+----
+
+[id='pro-installing-core-dependencies-{chapter}']
+[discrete]
+== Installing Core Dependencies
+
+[source,bash]
+----
+cd ./core
+npm install
+npm run bootstrap
+----
+
+NOTE: The Core repository is automatically cloned by the command `npm run bootstrap`.
+
+
+[id='pro-starting-the-core-server-{chapter}']
+[discrete]
+== Starting the Core Server
+
+[source,bash]
+----
+npm run start
+----
+
+NOTE: The Core server requires MongoDb and Redis to be running
+
+[id='pro-running-the-mobile-and-portal-demo-applications-{chapter}']
+[discrete]
+== Running the Mobile and Portal Demo Applications
+
+[source,bash]
+----
+cd ..
+npm run start
+----
+
+Both the Mobile and Portal Demo open automatically in a browser.
+
+For login details, refer to xref:credentials-for-the-demo-application-{chapter}[Credentials for the Demo Application] section of xref:ref-demo-app-{chapter}[{WFM-RC-NameShort} Demo Application Reference Material].
+
+NOTE: this procedure is for developers to install the latest master branch .

@@ -1,0 +1,10 @@
+include::topics/shared/attributes.adoc[]
+
+//':chapter:' is a vital parameter. See: http://asciidoctor.org/docs/user-manual/#include-multiple
+:chapter: introducing-raincatcher
+
+//Concepts
+include::topics/con-introducing-raincatcher.adoc[leveloffset=+0]
+
+//References
+include::topics/ref-introducing-raincatcher.adoc[leveloffset=+1]

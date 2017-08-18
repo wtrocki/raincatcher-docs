@@ -1,0 +1,68 @@
+[id='ref-introducing-raincatcher-{chapter}']
+= {WFM-RC-NameShort} Reference Material
+
+This section includes:
+
+. xref:highlighting-raincatcher-areas-of-focus-{chapter}[Highlighting {WFM-RC-NameShort} Areas of Focus]
+. xref:raincatcher-at-a-technical-level-{chapter}[{WFM-RC-NameShort} at a Technical Level]
+. xref:identifying-raincatcher-repositories-{chapter}[Identifying {WFM-RC-NameShort} Repositories]
+. xref:differentiating-raincatcher-from-tech-preview-{chapter}[Differentiating {WFM-RC-NameShort} from 'Tech Preview']
+
+[id='highlighting-raincatcher-areas-of-focus-{chapter}']
+== Highlighting {WFM-RC-NameShort} Areas of Focus
+
+.Areas of Focus
+|===
+|Area |Focus
+
+|Framework
+|A generic and developer friendly framework (set of classes) for building mobile and website Workforce Management solutions
+
+|Modules
+|Modules specific to {WFM-RC-NameShort}, for example: signature-module, scheduler
+
+|Integrations
+|Integrations to satisfy {WFM-RC-NameShort} needs, for example: authentication, storage, offline capabilities, server side synchronization
+
+|User Interface
+|Graphical User Interfaces are implemented in AngularJS and Angular
+|===
+
+[id='raincatcher-at-a-technical-level-{chapter}']
+== {WFM-RC-NameShort} at a Technical Level
+
+* link:https://nodejs.org/en/[Node.js] used for server side code
+* Hybrid mobile development using https://cordova.apache.org/[Cordova]
+* Object Oriented approach (classes and interfaces)
+* Focus on module reuse and flexibility
+* Incorporates open-source technologies, for example: MongoDb, Keycloak, Passport.js
+
+[id='identifying-raincatcher-repositories-{chapter}']
+== Identifying {WFM-RC-NameShort} Repositories
+ 
+The {WFM-RC-NameShort} is available in three github repositories:
+
+.github Repositories
+|===
+|Repository |Description
+
+|link:https://github.com/feedhenry-raincatcher/raincatcher-core[raincatcher-core]
+|Contains all of the supported modules and demo server.
+
+|link:https://github.com/feedhenry-raincatcher/raincatcher-angularjs[raincatcher-angularjs]
+|Contains angularJS user interface for {WFM-RC-NameShort}
+
+|link:https://github.com/feedhenry-raincatcher/raincatcher-docs[raincatcher-docs]
+|Repository contains {WFM-RC-NameShort} documentation
+|===
+
+[id='differentiating-raincatcher-from-tech-preview-{chapter}']
+== Differentiating {WFM-RC-NameShort} from 'Tech Preview'
+
+The {WFM-RC-NameShort} project was originally called *Tech Preview*.
+The *Tech Preview* codebase is now deprecated and is accessible at link:https://github.com/feedhenry-raincatcher/raincatcher-documentation[Tech Preview Documentation].
+The main differences between {WFM-RC-NameShort} and *Tech Preview* are:
+
+* Mediator pattern is removed from {WFM-RC-NameShort}
+* *Tech Preview* is not object oriented
+* *{WFM-RC-NameShort}* is written in Typescript

@@ -1,0 +1,21 @@
+[id='con-introducing-raincatcher-{chapter}']
+= Introducing {WFM-RC-NameLong}
+
+//downstream == {WFM-RC-NameLong} is a Workforce Management Platform and is also referred to as {WFM-RC-NameShort}.
+{WFM-RC-NameLong} is a Workforce Management Platform.
+The latest version of {WFM-RC-NameShort} is {WFM-RC-Version}.
+
+The primary goal of {WFM-RC-NameShort} is to produce a set of modules for developers to integrate {WFM-RC-NameShort} features into their applications.
+
+The following features are on the {WFM-RC-NameShort} roadmap:
+
+* Workflow Management
+* Geolocation
+* Image capture
+* Internal Messaging and 3rd party Messaging
+* Mobile Forms
+* Real-time Data Access
+* Data Synchronization
+* Integration of sensor data
+
+//Features included in {WFM-RC-NameShort} {WFM-RC-Version} are:

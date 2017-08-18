@@ -1,0 +1,23 @@
+[id='ref-demo-app-{chapter}']
+= {WFM-RC-NameShort} Demo Application Reference Material
+
+This section includes:
+
+. xref:credentials-for-the-demo-application-{chapter}[Credentials for the Demo Application]
+
+[id='credentials-for-the-demo-application-{chapter}']
+== Credentials for the Demo Application
+
+Login using the following credentials:
+
+|===
+|Application |Username |Password
+
+|Mobile
+|`trever`
+|`123`
+
+|Portal
+|`max`
+|`123`
+|===
