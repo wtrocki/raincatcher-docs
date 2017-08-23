@@ -1,0 +1,16 @@
+{
+  "name": "@raincatcher/website",
+  "version": "1.0.0",
+  "description": "RainCatcher website source code",
+  "main": "index.js",
+  "scripts": {
+    "buildAsciiDocs": "node ./scripts/cli.js asciidocs-build",
+    "buildApiDocs": "node ./scripts/cli.js apidocs-build",
+    "publishPage": "node ./scripts/cli.js publish"
+  },
+  "dependencies": {
+    "fs-extra": "^4.0.1",
+    "gh-pages": "^1.0.0",
+    "yargs": "^8.0.2"
+  }
+}
