@@ -57,19 +57,18 @@ The _rhmap_ and _upstream-1_ folder have access to the _topics_ folder via a sym
 === Building the Community Edition
 
 Command line tool created.
-Setup
+Setup required packages (Node.js/npm required)
 
-    cd website
     npm install
 
-> NOTE: ascidoctor is required. `gem install asciidoctor`
-
 Publishing 
-  
+
     npm run buildAsciiDocs
     npm run buildApiDocs
     npm run publish   
-    
+
+NOTE: _ascidoctor_ needs to be installed on machine. To install asciidoctor run _gem install asciidoctor_
+
 === Creating Anchors and xrefs
 
 ==== Dynamic Anchor and Dynamic xref
