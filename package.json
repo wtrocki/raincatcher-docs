@@ -4,13 +4,14 @@
   "description": "RainCatcher website source code",
   "main": "index.js",
   "scripts": {
-    "buildAsciiDocs": "node ./scripts/cli.js asciidocs-build",
-    "buildApiDocs": "node ./scripts/cli.js apidocs-build",
-    "publishPage": "node ./scripts/cli.js publish"
+    "buildAsciiDocs": "node ./website/cli.js asciidocs-build",
+    "buildApiDocs": "node ./website/cli.js apidocs-build",
+    "publishPage": "node ./website/cli.js publish"
   },
   "dependencies": {
     "fs-extra": "^4.0.1",
     "gh-pages": "^1.0.0",
+    "moment": "^2.18.1",
     "yargs": "^8.0.2"
   }
 }

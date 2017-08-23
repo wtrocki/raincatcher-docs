@@ -4,8 +4,10 @@ var fs = require('fs');
 var path = require('path');
 const fse = require('fs-extra')
 var ghpages = require('gh-pages');
+var moment = require('moment');
 
-var ascidocsPath = '../../docs/workforce-management-framework/upstream-1';
+var pageRoot = './website';
+var ascidocsPath = '../docs/workforce-management-framework/upstream-1';
 var docRoot = path.join(__dirname, ascidocsPath).normalize()
 
 yargs.usage('Usage: $0 <command>')
@@ -36,7 +38,7 @@ function asciidocsHandler(argv) {
             return process.exit(1);
         }
         console.log("Created documentation file");
-        fse.moveSync(path.join(docRoot, "master.html"), './docs/index.html',
+        fse.moveSync(path.join(docRoot, "master.html"), pageRoot + '/docs/index.html',
             { overwrite: true });
         console.log("Documentation copied to website");
     });
@@ -44,11 +46,11 @@ function asciidocsHandler(argv) {
 
 function publishWebsite() {
     var options = {
-        branch: 'gh-pages-test',
+        branch: 'gh-pages',
         remote: 'origin',
-        //tag: 'gh-pages'
+        tag: 'gh-pages-' + moment().format('DDMMYYYY:h:mm')
     }
-    ghpages.publish('.', options, function(err) {
+    ghpages.publish(pageRoot, options, function(err) {
         if (err) {
             return console.error("Page failed to publish", err);
         }
@@ -57,7 +59,7 @@ function publishWebsite() {
 }
 
 function copyApiFiles() {
-    fse.copySync('../api', './api', { overwrite: true });
+    fse.copySync('./api',  pageRoot + '/api', { overwrite: true });
     console.log("Created api documentation");
 };
 
