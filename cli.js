@@ -47,8 +47,7 @@ function asciidocsHandler(argv) {
 function publishWebsite() {
     var options = {
         branch: 'gh-pages',
-        remote: 'origin',
-        tag: 'gh-pages-' + moment().format('DDMMYYYY:h:mm')
+        remote: 'origin'
     }
     ghpages.publish(pageRoot, options, function(err) {
         if (err) {
